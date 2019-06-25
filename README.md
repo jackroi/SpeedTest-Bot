@@ -57,7 +57,7 @@ These instructions will get you a copy of the project up and running on your loc
 Clone/Download the repository.
 
 ```bash
-git clone link
+git clone https://github.com/jackroi/SpeedTest-Bot.git
 ```
 
 Enter into SpeedTest-Bot folder and install the required packages using `yarn` or `npm`. It can take a few minutes, because puppeteer need to download chromium.
