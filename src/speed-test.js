@@ -23,7 +23,7 @@ const do_ookla_speedtest_multiple = async (page) => {
 
   // skip pop-up
   //await page.click('#_evidon-banner-acceptbutton');
-  await page.click('#_evidon-accept-button');
+  await page.click('#_evidon-banner-acceptbutton');
   await page.waitFor(3000);
 
   // await page.screenshot({
@@ -56,9 +56,9 @@ const do_ookla_speedtest_multiple = async (page) => {
     };
 
     const data_selectors = {
-      ping: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div.result-container.clearfix > div.result-container-speed > div.result-item-container.result-item-container-align-right > div > div.result-data.u-align-left > span',
-      download: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div.result-container.clearfix > div.result-container-speed > div.result-item-container.result-item-container-align-center > div > div.result-data.u-align-left > span',
-      upload: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div.result-container.clearfix > div.result-container-speed > div.result-item-container.result-item-container-align-left > div > div.result-data.u-align-left > span'
+      ping: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div > div.result-container-speed.result-container-speed-active > div.result-container-data > div.result-item-container.result-item-container-align-right > div > div.result-data.u-align-left > span',
+      download: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div > div.result-container-speed.result-container-speed-active > div.result-container-data > div.result-item-container.result-item-container-align-center > div > div.result-data.u-align-left > span',
+      upload: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div > div.result-container-speed.result-container-speed-active > div.result-container-data > div.result-item-container.result-item-container-align-left > div > div.result-data.u-align-left > span'
     };
 
     data.download = document.querySelector(data_selectors.download).textContent;
@@ -77,11 +77,11 @@ const do_ookla_speedtest_single = async (page) => {
 
   // skip pop-up
   //await page.click('#_evidon-banner-acceptbutton');
-  await page.click('#_evidon-accept-button');
+  await page.click('#_evidon-banner-acceptbutton');
   await page.waitFor(3000);
 
   // change to single
-  const ookla_speedtest_single_selector = '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div:nth-child(10) > div > div.toggle > a.test-mode-icon > svg.svg-icon.svg-icon-md.svg-icon-ring.active';
+  const ookla_speedtest_single_selector = '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div:nth-child(5) > div > div > a.test-mode-icon > svg.svg-icon.svg-icon-ms.svg-icon-ring.active';
   await page.click(ookla_speedtest_single_selector);
   await page.waitFor(3500);
 
@@ -114,9 +114,9 @@ const do_ookla_speedtest_single = async (page) => {
     };
 
     const data_selectors = {
-      ping: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div.result-container.clearfix > div.result-container-speed > div.result-item-container.result-item-container-align-right > div > div.result-data.u-align-left > span',
-      download: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div.result-container.clearfix > div.result-container-speed > div.result-item-container.result-item-container-align-center > div > div.result-data.u-align-left > span',
-      upload: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div.result-container.clearfix > div.result-container-speed > div.result-item-container.result-item-container-align-left > div > div.result-data.u-align-left > span'
+      ping: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div > div.result-container-speed.result-container-speed-active > div.result-container-data > div.result-item-container.result-item-container-align-right > div > div.result-data.u-align-left > span',
+      download: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div > div.result-container-speed.result-container-speed-active > div.result-container-data > div.result-item-container.result-item-container-align-center > div > div.result-data.u-align-left > span',
+      upload: '#container > div.main-content > div > div > div > div.pure-u-custom-speedtest > div.speedtest-container.main-row > div.main-view > div > div.result-area.result-area-test > div > div > div.result-container-speed.result-container-speed-active > div.result-container-data > div.result-item-container.result-item-container-align-left > div > div.result-data.u-align-left > span'
     };
 
     data.download = document.querySelector(data_selectors.download).textContent;

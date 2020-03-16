@@ -67,6 +67,8 @@ cd SpeedTest-Bot
 yarn install
 ```
 
+Configure Speed Test Bot following [these steps](#configuration).
+
 Check whether the installation was successful.
 
 ```bash
@@ -76,10 +78,10 @@ yarn start -h
 It sholud output a help text.
 
 ## ⚙️ Configuration <a name="configuration"></a>
-Rename `config-example.json` to `config.json`, and change the content as you prefer, using your favourite text editor.
+Rename or copy `config-example.json` to `config.json`, and change the content as you prefer, using your favourite text editor.
 
 ```bash
-mv config-example.json config.json
+cp config-example.json config.json
 ```
 
 - `output_file`: name of the output file, where the results will be stored
